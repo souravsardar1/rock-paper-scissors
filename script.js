@@ -80,3 +80,10 @@ console.log(`\nFinal Score - You: ${humanScore}, Computer: ${computerScore}`);
 
 
 
+if (humanScore > computerScore) {
+    console.log("You win the game! 🎉");
+} else if (humanScore < computerScore) {
+    console.log("Computer wins the game! 🤖");
+} else {
+    console.log("The game is a tie!");
+}
