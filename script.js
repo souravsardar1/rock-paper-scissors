@@ -16,7 +16,7 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+
 
 
 
@@ -25,7 +25,7 @@ function getHumanChoice() {
     return prompt("Choose rock, paper, or scissors:");
 }
 
-console.log(getHumanChoice());
+
 
 
 
@@ -60,4 +60,13 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+console.log(`You chose: ${humanSelection}`);
+console.log(`Computer chose: ${computerSelection}`);
+
+for (let i = 0; i < 5; i++) {
+
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
+        playRound(humanChoice, computerChoice);
+    }
