@@ -53,20 +53,30 @@ function playRound(humanChoice, computerChoice) {
             `You lose! ${computerChoice} beats ${humanChoice}`
         );
     }
+
+    
 }
 
 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-console.log(`You chose: ${humanSelection}`);
-console.log(`Computer chose: ${computerSelection}`);
-
-for (let i = 0; i < 5; i++) {
-
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-
-        playRound(humanChoice, computerChoice);
+for (let i = 1; i <= 5; i++) {
+    console.log(`\n--- Round ${i} ---`);
+    
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    
+    if (!humanSelection) {
+        console.log("No choice made, skipping round.");
+        continue;
     }
+
+    console.log(`You chose: ${humanSelection}`);
+    console.log(`Computer chose: ${computerSelection}`);
+
+    playRound(humanSelection, computerSelection);
+}
+
+console.log(`\nFinal Score - You: ${humanScore}, Computer: ${computerScore}`);
+
+
+
