@@ -22,7 +22,7 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    return prompt("Choose rock, paper, or scissors:");
+    // return prompt("Choose rock, paper, or scissors:");
 }
 
 
